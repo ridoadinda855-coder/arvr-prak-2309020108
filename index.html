@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Praktikum 1 - Scene (Berjarak & Rapi)</title>
+  <!-- Menggunakan A-Frame versi 1.7.1 -->
+  <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+    <!-- Langit & Lantai -->
+    <a-sky color="#1A1A1A"></a-sky>
+    <a-plane position="0 0 -5" rotation="-90 0 0" width="20" height="12" color="#00A651"></a-plane>
+
+    <!-- ========================================== -->
+    <!-- IDENTITAS (NAMA & NPM) DI BACKGROUND       -->
+    <!-- ========================================== -->
+    <a-text value="Ridho Adinda Kusman"
+            position="0 4.6 -6"
+            align="center"
+            width="12"
+            color="#FFFFFF"></a-text>
+    <a-text value="NPM: 2309020108"
+            position="0 3.9 -6"
+            align="center"
+            width="9"
+            color="#FFFFFF"></a-text>
+
+    <!-- ========================================== -->
+    <!-- SISI KIRI: KELOMPOK WARNA KUNING ORANGE    -->
+    <!-- ========================================== -->
+
+    <!-- Baris Depan - Kuning -->
+    <a-sphere position="-4.5 1.0 -4.5" radius="0.7" color="#FF8C00"></a-sphere>
+    <a-cylinder position="-2.7 0.75 -4.5" radius="0.5" height="1.5" color="#FF8C00"></a-cylinder>
+    <a-cone position="-0.9 0.75 -4.5" radius-bottom="0.5" height="1.5" color="#FF8C00"></a-cone>
+
+    <!-- Baris Atas - Kuning -->
+    <a-torus position="-4.5 2.4 -4.5" radius="0.5" radius-tubular="0.1" rotation="90 0 0" color="#FF8C00"></a-torus>
+    <a-octahedron position="-2.7 2.4 -4.5" radius="0.6" color="#FF8C00"></a-octahedron>
+    <a-circle position="-0.9 2.4 -4.5" radius="0.6" color="#FF8C00"></a-circle>
+
+
+    <!-- ========================================== -->
+    <!-- SISI KANAN: KELOMPOK WARNA HITAM           -->
+    <!-- ========================================== -->
+
+    <!-- Baris Depan - Hitam -->
+    <a-box position="0.9 0.5 -4.5" rotation="0 45 0" color="#000000"
+           animation="property: rotation; to: 0 405 0; dur: 8000; easing: linear; loop: true">
+    </a-box>
+    <a-tetrahedron position="2.7 0.7 -4.5" radius="0.6" color="#000000"></a-tetrahedron>
+    <a-cone position="4.5 0.75 -4.5" radius-bottom="0.5" radius-top="0" height="1.5"
+            segments-radial="3" color="#000000"></a-cone>
+
+    <!-- Baris Atas - Hitam -->
+    <a-torus position="0.9 2.4 -4.5" radius="0.5" radius-tubular="0.1" rotation="90 0 0" color="#000000"></a-torus>
+    <a-dodecahedron position="2.7 2.4 -4.5" radius="0.6" color="#000000"></a-dodecahedron>
+    <a-ring position="4.5 2.4 -4.5" radius-inner="0.3" radius-outer="0.6" color="#000000"></a-ring>
+
+
+    <!-- ========================================== -->
+    <!-- KAMERA                                     -->
+    <!-- ========================================== -->
+    <a-entity position="0 1.8 2.5">
+      <a-camera></a-camera>
+    </a-entity>
+  </a-scene>
+</body>
+</html>
